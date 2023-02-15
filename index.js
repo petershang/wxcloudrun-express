@@ -49,6 +49,14 @@ app.get("/api/wx_openid", async (req, res) => {
   }
 });
 
+
+app.post("/mini-app/notification", async (req, res) => {
+  console.log('url:', req.url)
+  console.log('headers:', req.headers)
+  console.log('body:', req.body)
+  res.send('ok');
+});
+
 const port = process.env.PORT || 80;
 
 async function bootstrap() {
